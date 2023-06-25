@@ -16,7 +16,7 @@ spec:
                     - git-clone-checking-out-a-branch
             topologyKey: kubernetes.io/hostname
   pipelineRef:
-    name: cat-branch-readme
+    name: public-openshift
   workspaces:
     - name: shared-data
       volumeClaimTemplate:
@@ -25,7 +25,7 @@ spec:
             - ReadWriteOnce
           resources:
             requests:
-              storage: 1Gi
+              storage: 100Mi
   params:
     - name: repo-url
       value: https://github.com/opswareauto/public-openshift.git
